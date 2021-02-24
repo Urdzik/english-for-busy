@@ -6,7 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.englishforbusy.android.R
+import com.englishforbusy.android.databinding.FragmentLoginBinding
+import com.englishforbusy.android.databinding.FragmentSentensBinding
+import com.englishforbusy.android.ui.auth.login.LoginViewModel
 
 class SentensFragment : Fragment() {
 
@@ -14,7 +20,8 @@ class SentensFragment : Fragment() {
         fun newInstance() = SentensFragment()
     }
 
-    private lateinit var viewModel: SentensViewModel
+    private val binding: FragmentSentensBinding by viewBinding()
+    private val viewModel: SentensViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +32,9 @@ class SentensFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SentensViewModel::class.java)
-        // TODO: Use the ViewModel
+        binding.imageView7.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 }

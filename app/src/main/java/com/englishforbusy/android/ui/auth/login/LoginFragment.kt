@@ -6,7 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.englishforbusy.android.R
+import com.englishforbusy.android.databinding.FragmentLoginBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LoginFragment : Fragment() {
 
@@ -14,7 +23,10 @@ class LoginFragment : Fragment() {
         fun newInstance() = LoginFragment()
     }
 
-    private lateinit var viewModel: LoginViewModel
+    private val binding: FragmentLoginBinding by viewBinding()
+    private val viewModel: LoginViewModel by viewModels()
+    private val email: String = "my.email@gmail.com"
+    private val pass: String = "qwerty"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +37,26 @@ class LoginFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        binding.button.setOnClickListener {
+            if (binding.email.text.toString() == email && binding.pass.text.toString() == pass){
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+            }else{
+                binding.textInputLayout2.error = "Не вірний пароль aбо електронна пошта"
+                lifecycleScope.launch {
+                    delay(5000)
+                    withContext(Dispatchers.Main){
+                        binding.textInputLayout2.isErrorEnabled = false
+                    }
+                }
+            }
+        }
+
+        binding.register.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+        }
     }
 
 }
+
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.englishforbusy.android.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.englishforbusy.android.ui.auth.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.englishforbusy.android.ui.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_treningsFragment"
+            app:destination="@id/treningsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treningsFragment"
+        android:name="com.englishforbusy.android.ui.trenings.TreningsFragment"
+        android:label="fragment_trenings"
+        tools:layout="@layout/fragment_trenings" >
+        <action
+            android:id="@+id/action_treningsFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+        <action
+            android:id="@+id/action_treningsFragment_to_sentensFragment"
+            app:destination="@id/sentensFragment" />
+        <action
+            android:id="@+id/action_treningsFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWordsFragment"
+        android:name="com.englishforbusy.android.ui.add_words.AddWordsFragment"
+        android:label="fragment_add_words"
+        tools:layout="@layout/fragment_add_words" />
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.englishforbusy.android.ui.card.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.englishforbusy.android.ui.question.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" />
+    <fragment
+        android:id="@+id/sentensFragment"
+        android:name="com.englishforbusy.android.ui.sentens.SentensFragment"
+        android:label="fragment_sentens"
+        tools:layout="@layout/fragment_sentens" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.englishforbusy.android.ui.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.englishforbusy.android.ui.words.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words" >
+        <action
+            android:id="@+id/action_wordsFragment_to_addWordsFragment"
+            app:destination="@id/addWordsFragment" />
+    </fragment>
+</navigation>

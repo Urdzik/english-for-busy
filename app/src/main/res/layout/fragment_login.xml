@@ -24,6 +24,7 @@
         android:layout_marginTop="16dp"
         android:text="Логін"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -42,6 +43,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:id="@+id/email"
             android:inputType="textEmailAddress"
             android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -52,17 +54,18 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="36dp"
+        android:layout_marginTop="16dp"
         android:hint="Пароль"
         app:helperText="Пароль має бути довше 8 символів"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/pass"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,9 +82,10 @@
         app:layout_constraintVertical_bias="0.26999998" />
 
     <TextView
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Не маєш акаунту? Зарегеструся!"
+        android:text="@string/b_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"

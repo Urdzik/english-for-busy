@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">English For Busy</string>
+    <string name="b_b">Не маєш акаунту? <b>Зареєструйся!</b></string>
 </resources>

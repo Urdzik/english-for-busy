@@ -6,7 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.englishforbusy.android.MainActivity
 import com.englishforbusy.android.R
+import com.englishforbusy.android.databinding.FragmentLoginBinding
+import com.englishforbusy.android.databinding.FragmentWordsBinding
+import com.englishforbusy.android.ui.auth.login.LoginViewModel
 
 class WordsFragment : Fragment() {
 
@@ -14,7 +21,10 @@ class WordsFragment : Fragment() {
         fun newInstance() = WordsFragment()
     }
 
-    private lateinit var viewModel: WordsViewModel
+    private val binding: FragmentWordsBinding by viewBinding()
+    private val viewModel: WordsViewModel by viewModels()
+
+    private val adapter = WordsAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +35,17 @@ class WordsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(WordsViewModel::class.java)
-        // TODO: Use the ViewModel
+        binding.recyclerView.adapter = adapter
+
+        adapter.submitList((requireActivity() as MainActivity).list)
+
+        binding.imageView7.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.fab.setOnClickListener {
+            findNavController().navigate(WordsFragmentDirections.actionWordsFragmentToAddWordsFragment())
+        }
     }
 
 }
