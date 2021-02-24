@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "466414715443",
+    "project_id": "english-for-busy",
+    "storage_bucket": "english-for-busy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466414715443:android:1d236c9b974d9000b41946",
+        "android_client_info": {
+          "package_name": "com.englishforbusy.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466414715443-uk9pj5e68hfhn1o6dkpr0fco70pt2bpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.englishforbusy.android",
+            "certificate_hash": "15a3f3fa7a77d88394d8f81e5e883a0a23f1da87"
+          }
+        },
+        {
+          "client_id": "466414715443-3o8qj261rgrtdt4qfns2jspcarit13lh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF1yC3SQvMF9hcrXd5AVjUyWHwSyxdvec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466414715443-3o8qj261rgrtdt4qfns2jspcarit13lh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
