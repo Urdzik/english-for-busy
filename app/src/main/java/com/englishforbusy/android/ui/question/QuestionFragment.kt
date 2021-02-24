@@ -38,8 +38,8 @@ class QuestionFragment : Fragment() {
     }
 
     private fun setList(){
-        questionsList.addAll(listOf(
-            GrammarTest("What article should be used when talking about unfamiliar object?", )
-        ))
+//        questionsList.addAll(listOf(
+//            GrammarTest("What article should be used when talking about unfamiliar object?", )
+//        ))
     }
 }

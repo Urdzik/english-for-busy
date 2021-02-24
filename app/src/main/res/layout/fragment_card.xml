@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
+        android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1/10"
@@ -59,6 +60,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/word"
                 tools:text="Room"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -110,6 +112,7 @@
         app:tint="@color/common_google_signin_btn_text_light" />
 
     <ProgressBar
+        android:id="@+id/progress"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
