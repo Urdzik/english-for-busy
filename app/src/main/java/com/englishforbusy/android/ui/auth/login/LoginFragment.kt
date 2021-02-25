@@ -44,7 +44,7 @@ class LoginFragment : Fragment() {
             }else{
                 binding.textInputLayout2.error = "Не вірний пароль aбо електронна пошта"
                 lifecycleScope.launch {
-                    delay(5000)
+                    delay(3000)
                     withContext(Dispatchers.Main){
                         binding.textInputLayout2.isErrorEnabled = false
                     }

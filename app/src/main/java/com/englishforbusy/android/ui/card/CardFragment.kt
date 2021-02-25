@@ -15,16 +15,16 @@ import com.englishforbusy.android.databinding.FragmentCardBinding
 class CardFragment : Fragment() {
 
     private val list = listOf(
-        Word("Room", "Кімната"),
-        Word("I", "Я"),
-        Word("We", "Ми"),
-        Word("Blue", "Синій"),
-        Word("Red", "Червоний"),
-        Word("Mather", "Мати"),
-        Word("Father", "Тато"),
-        Word("Up", "Вверх"),
-        Word("Left", "Ліво"),
-        Word("Dog", "Собака"),
+        Word("ambiguous", "Сумнівний"),
+        Word("conventional", "Звичайний"),
+        Word("disguise", "одяг для маскування, переодягання"),
+        Word("hilarious", "веселий"),
+        Word("catchy", "легкий для запамятовування"),
+        Word("friction", "протирічча"),
+        Word("gripping", "Захоплюючий"),
+        Word("sombre", "Темний, похмурий"),
+        Word("dated", "Застарілий"),
+        Word("bully", "Хуліган"),
     )
     var index = 0
 
