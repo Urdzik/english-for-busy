@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="16dp"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
     tools:context=".ui.card.CardFragment">
 
     <ImageView
@@ -17,11 +17,12 @@
         app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
+        android:id="@+id/oneFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="1/10"
         android:textSize="16sp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView6"
         app:layout_constraintEnd_toEndOf="@+id/cardView6" />
 
@@ -180,9 +181,9 @@
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
                 app:layout_constraintEnd_toStartOf="@id/checkBox3"
                 app:layout_constraintStart_toEndOf="@+id/checkBox"
                 app:layout_constraintTop_toTopOf="@+id/checkBox3" />
@@ -204,11 +205,11 @@
     </androidx.cardview.widget.CardView>
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/back"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_back"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/cardView6"
         app:layout_constraintEnd_toStartOf="@+id/cardView6"
         app:layout_constraintStart_toStartOf="parent"
@@ -228,11 +229,12 @@
         app:tint="@color/common_google_signin_btn_text_light" />
 
     <ProgressBar
+        android:id="@+id/progress"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:max="10"
         android:progressTint="@color/purple_500"
-        android:progress="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cardView6"
         app:layout_constraintStart_toStartOf="@+id/cardView6"

@@ -172,11 +172,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Каталог слів"
-                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:text="Почати заняття"
                         android:textColor="@color/material_on_background_emphasis_medium"
                         android:textSize="16sp"
-                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@+id/imageView4"
                         app:layout_constraintStart_toStartOf="@+id/imageView4"
                         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
