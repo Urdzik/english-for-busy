@@ -66,7 +66,12 @@ class CardFragment : Fragment() {
         binding.back.setOnClickListener {
             index--
             setData(list[index])
-            binding.progress.setProgress(((index - 1 ) * 10), true)
+            if (index != 1){
+                binding.progress.setProgress(((index - 1 ) * 10), true)
+            }else{
+                binding.progress.setProgress(((10)), true)
+
+            }
             if (index == 0) {
                 binding.back.visibility = View.GONE
             }
